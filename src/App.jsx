@@ -1,5 +1,5 @@
 import React from 'react';
-import './SortingVisualizer.css';
+import './sortingVisualizer.css';
 import {bubbleSort} from '../algorithms/bubbleSort'
 import {mergeSortTopDown} from "../algorithms/mergeSortTopDown";
 import {mergeSortBottomUp} from "../algorithms/mergeSortBottomUp";
