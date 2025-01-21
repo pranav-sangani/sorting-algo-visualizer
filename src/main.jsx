@@ -1,10 +1,10 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App'; // Your main component
-import './index.css'; // Global styles if any
+import React from "react";
+import ReactDOM from "react-dom/client";
+import SortingVisualizer from "./SortingVisualizer/SortingVisualizer";
+import "./SortingVisualizer/SortingVisualizer.css";
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <App />
+    <SortingVisualizer />
   </React.StrictMode>
 );
