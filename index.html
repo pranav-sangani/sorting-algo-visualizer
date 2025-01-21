@@ -4,9 +4,52 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sorting Algorithm Visualizer</title>
+    <!-- Include SortingVisualizer styles -->
+    <link rel="stylesheet" href="./src/SortingVisualizer/SortingVisualizer.css" />
+    <style>
+      /* General fallback styling */
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #1e1e1e;
+        color: #00ffff;
+        text-align: center;
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>
     <!-- React app will mount here -->
+
+    <!-- React Application -->
+    <script type="module">
+      import React from "react";
+      import ReactDOM from "react-dom/client";
+
+      // Import SortingVisualizer and CSS
+      import SortingVisualizer from "./src/SortingVisualizer/SortingVisualizer.js";
+
+      // Import Sorting Algorithms
+      import { bubbleSort } from "./src/algorithms/bubbleSort.js";
+      import { mergeSortTopDown } from "./src/algorithms/mergeSortTopDown.js";
+      import { mergeSortBottomUp } from "./src/algorithms/mergeSortBottomUp.js";
+      import { quickSort } from "./src/algorithms/quickSort.js";
+      import { insertionSort } from "./src/algorithms/insertionSort.js";
+
+      console.log("Loaded Sorting Algorithms:", {
+        bubbleSort,
+        mergeSortTopDown,
+        mergeSortBottomUp,
+        quickSort,
+        insertionSort,
+      });
+
+      // Render the SortingVisualizer
+      ReactDOM.createRoot(document.getElementById("root")).render(
+        <React.StrictMode>
+          <SortingVisualizer />
+        </React.StrictMode>
+      );
+    </script>
   </body>
 </html>
